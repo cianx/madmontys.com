@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  @apply text-foreground-500;
+  @apply bg-background-500;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+  @apply text-foreground-600;
+}
+
+h1 {
+  @apply text-4xl;
+  @apply pb-4;
+}
+
+h2 {
+  @apply text-3xl;
+  @apply pb-3;
+}
+
+h3 {
+  @apply text-2xl;
+  @apply pb-2;
+}
+
+a {
+  font-weight: bold;
+  @apply text-foreground-500;
+}
+
+a:active,
+a:hover,
+a:visited {
+  @apply text-foreground-600;
+}
+
+p {
+  @apply pb-2;
+}
+
+blockquote p {}
+
+blockquote p::before {
+  @apply text-4xl;
+  content: '\201C';
+}
+
+blockquote p::after {
+  @apply text-4xl;
+  content: '\201D';
+}
+
+body {
+  @apply font-sans text-lg;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.body-column {
+  @apply m-auto max-w-[768px];
+}
+
+.btn {
+  @apply m-4 mt-0 p-4 rounded-2xl border-2 drop-shadow-xl border-transparent;
+}
+
+.btn.no-border {
+  @apply border-0;
+}
+
+.btn:hover {
+  @apply bg-opacity-80 border-foreground-500;
+}
+
+/* ********************************************************
+ * Dark mode  
+ */
+.dark {
+  @apply bg-dark-500 text-background-500;
+}
+
+.dark .icon,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark a {
+  @apply text-background-500;
+}
+
+.dark a:visited,
+.dark a:hover,
+.dark a:active {
+  @apply text-foreground-600;
+}
+
+.dark .btn:hover {
+  @apply border-background-500;
+}
+
+
+/* ********************************************************
+ * Light mode  
+ */
+.light {
+  @apply bg-light-500 text-foreground-500;
+}
+
+.light .icon,
+.light h1,
+.light h2,
+.light h3,
+.light a {
+  @apply text-foreground-500;
+}
+
+.light a:visited,
+.light a:hover,
+.light a:active {
+  @apply text-foreground-600;
+}
+
+.light .btn:hover {
+  @apply border-foreground-500;
+}
+
+/* ********************************************************
+ * Primary mode  
+ */
+.primary {
+  @apply bg-primary-500 text-background-500;
+}
+
+.primary .icon,
+.primary h1,
+.primary h2,
+.primary h3,
+.primary a {
+  @apply text-background-500;
+}
+
+.primary a:visited,
+.primary a:hover,
+.primary a:active {
+  @apply text-background-400;
+}
+
+.primary .btn:hover,
+.primary.btn:hover {
+  @apply border-background-500;
+}
+
+/* ********************************************************
+ *reverse mode  
+ */
+.reverse {
+  @apply bg-foreground-500 text-background-500;
+}
+
+.reverse .icon,
+.reverse h1,
+.reverse h2,
+.reverse h3,
+.reverse a {
+  @apply text-background-500;
+}
+
+.reverse .btn:hover,
+.reverse a:visited,
+.reverse a:hover,
+.reverse a:active {
+  @apply text-background-400;
+}
+
+.reverse .btn:hover {
+  @apply border-background-500;
+}
